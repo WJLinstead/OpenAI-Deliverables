@@ -13,12 +13,41 @@ DALL-E is an AI model developed by OpenAI capable of generating images from text
 
 In this project we will be focusing on the GPT Series.  
 
+# Requirements
+
+You will need Node.js installed and have an account created with OpenAI.  
+This project requires an API key that is found in your OpenAI account.
+
+To create an account, go to https://openai.com/
+
 # Instructions
 
-1. Install the OpenAI Node.js library 
+## Installing OpenAI
+
+1. Open your desired code editor and create a new project
+
+2. Install the OpenAI Node.js library using your terminal
 ```
 npm install openai
 ```
+
+This will generate a package.json file with the openAI dependency inside, a package-lock.json file and a folder labelled node_modules with required files.
+
+## Generate your API Key
+
+2. Log in to your OpenAI account at https://openai.com/
+
+3. Select the "API" option
+
+4. On the left, there will be a navigation bar that pops open when you hover over it. Select the lock icon labelled "API Keys"
+
+5. Click the "+ Create new Secret Key" button to generate a new key
+
+6. Name your key and set your permissions. For this we will keep it selected as "All"
+
+7. Click the "Create secret key" button. 
+
+8. Copy and paste the generated key into a safe place as you may only access this key once. 
 
 # Collaborators 
 Jashanpreet Singh - 200513016  
