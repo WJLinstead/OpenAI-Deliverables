@@ -13,6 +13,13 @@ DALL-E is an AI model developed by OpenAI capable of generating images from text
 
 In this project we will be focusing on the GPT Series.  
 
+# Instructions
+
+1. Install the OpenAI Node.js library 
+```
+npm install openai
+```
+
 # Collaborators 
 Jashanpreet Singh - 200513016  
 Shania Muller - 200270187  
@@ -22,3 +29,7 @@ William Linstead
 COMP2068  
 Javascript Frameworks  
 Winter 2024  
+
+# References
+https://platform.openai.com/docs/quickstart?context=node  
+https://www.npmjs.com/package/openai 
