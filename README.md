@@ -49,6 +49,49 @@ This will generate a package.json file with the openAI dependency inside, a pack
 
 8. Copy and paste the generated key into a safe place as you may only access this key once. 
 
+## Using OPENAI API in Node.js
+
+1. **Initialize the OpenAI client:**
+In your Node.js application, require the `openai` library and initialize the client with your API key:
+
+```javascript
+const OpenAIApi = require("openai");
+const openai = new OpenAIApi({ apiKey: "YOUR_API_KEY" });
+```
+This can also be achieved using a .env file so security reasons!
+.env might look like: 
+```
+OPENAI_API_KEY="Actual_API_Key"
+```
+Then JavaScript can be written as:
+```
+const OpenAIApi = require("openai"); 
+require("dotenv").config();
+
+// OPEN AI Package
+const openai = new OpenAIApi({
+  apiKey: process.env.OPENAI_SECRET_KEY,
+});
+```
+2. **Make requests to the OpenAI API:**
+To make a request to the OpenAI API, you can use the `openai.chat.completions.create` function as follows:
+```
+const response = await openai.chat.completions.create({
+  messages: [{ role: "system", content: "This is a test prompt"}],
+  model: "gpt-3.5-turbo",
+});
+```
+3. **Handling the response**
+The response from the API is stored in response variable as an object.To retrieve the actual response as text:
+```
+const reply = response.choices[0].message.content;
+console.log(reply);
+```
+
+
+This overview provides a concise guide on how to integrate the OpenAI API into your Node.js application. Feel free to adjust it according to your project's specific requirements and preferences.
+
+
 # Collaborators 
 Jashanpreet Singh - 200513016  
 Shania Muller - 200270187  
