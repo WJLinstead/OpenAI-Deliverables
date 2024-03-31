@@ -22,7 +22,7 @@
               <option value="Elvish_(Language_spoken_by_Elves_in_Lord_of_the_Rings)">Elvish</option>
               <option value="Mermish_(Language_spoken_by_Mermaids_in_Harry_Potter)">Mermish</option>
               <option value="UK_English_(English_with_loads_of_UK_slangs)">UK English</option>
-              <option value="other">Other</option> <!-- Added "Other" option -->
+              <option value="other">Other</option>
             </select>
           </div>
           <input type="text" id="customLanguageInput" name="customLanguage" class="form-input" style="display: none;" placeholder="Enter custom language name">
@@ -40,14 +40,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  function checkCustomLanguage(select) {
-    var customLanguageInput = document.getElementById("customLanguageInput");
-    if (select.value === "other") {
-      customLanguageInput.style.display = "block";
-    } else {
-      customLanguageInput.style.display = "none";
-    }
-  }
-</script>

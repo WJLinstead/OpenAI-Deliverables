@@ -23,9 +23,7 @@ router.post("/ask", async (req, res) => {
       throw new Error("Uh oh, no prompt was provided");
     }
     
-    // Check if the selected language is "other"
     if (language === "other") {
-      // Retrieve the custom language name from the request body
       language = req.body.customLanguage;
     }
 
@@ -34,10 +32,7 @@ router.post("/ask", async (req, res) => {
       model: "gpt-4",
     });
     
-    // Retrieve the completion text from response
     const translation = response.choices[0].message.content;
-    console.log(translation);
-    // Render the page with the translation
     res.render('index', { title: 'OpenAI API', translation });
   } catch (error) {
     console.log(error.message);
