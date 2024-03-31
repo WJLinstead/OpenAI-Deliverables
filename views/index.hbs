@@ -1,2 +1,20 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<form action="/ask" method="POST">
+  <label for="prompt">Enter your prompt:</label><br>
+  <input type="text" id="prompt" name="prompt"><br>
+  
+  <label for="language">Select a language:</label>
+  <select id="language" name="language">
+    <option value="High Valerian">High Valerian</option>
+    <!-- Add more language options as needed -->
+  </select><br>
+  
+  <button type="submit">Translate</button>
+</form>
+
+{{#if translation}}
+  <h2>Translation:</h2>
+  <p>{{ translation }}</p>
+{{/if}}
