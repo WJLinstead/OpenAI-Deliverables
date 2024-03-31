@@ -3,7 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const hbs = require('hbs');
+const helpers = require('handlebars-helpers')({
+  handlebars: hbs.handlebars
+});
 
+hbs.registerHelper('eq', helpers.eq);
 
 var indexRouter = require('./routes/index');
 

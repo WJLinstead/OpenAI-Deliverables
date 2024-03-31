@@ -22,7 +22,7 @@ router.post("/ask", async (req, res) => {
     if (!prompt) {
       throw new Error("Uh oh, no prompt was provided");
     }
-    
+
     if (language === "other") {
       language = req.body.customLanguage;
     }
@@ -40,10 +40,10 @@ router.post("/ask", async (req, res) => {
     });
     
     const translation = response.choices[0].message.content;
-    res.render('index', { title: 'OpenAI API', translation });
+    res.render('index', { title: 'OpenAI API', translation, selectedLanguage: language });
   } catch (error) {
     console.log(error.message);
-    res.render('index', { title: 'OpenAI API', translation: error.message});
+    res.render('index', { title: 'OpenAI API', translation: error.message, selectedLanguage: language });
   }
 });
 
