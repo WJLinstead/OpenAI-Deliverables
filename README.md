@@ -59,7 +59,7 @@ RateLimitError: 429 You exceeded your current quota, please check your plan and 
 ## Using OpenAI API in Node.js
 
 1. **Initialize the OpenAI client:**
-In your Node.js application, require the `openai` library and initialize the client with your API key:
+In your Node.js application, require the `openai` library
 
 ```javascript
 const OpenAIApi = require("openai");
