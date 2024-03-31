@@ -5,4 +5,5 @@ function checkCustomLanguage(select) {
     } else {
       customLanguageInput.style.display = "none";
     }
-  }
+}
+
