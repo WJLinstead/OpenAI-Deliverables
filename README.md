@@ -64,7 +64,7 @@ This can also be achieved using a .env file so security reasons!
 OPENAI_API_KEY="Actual_API_Key"
 ```
 Then JavaScript can be written as:
-```
+```javascript
 const OpenAIApi = require("openai"); 
 require("dotenv").config();
 
@@ -75,7 +75,7 @@ const openai = new OpenAIApi({
 ```
 2. **Make requests to the OpenAI API:**
 To make a request to the OpenAI API, you can use the `openai.chat.completions.create` function as follows:
-```
+```javascript
 const response = await openai.chat.completions.create({
   messages: [{ role: "system", content: "This is a test prompt"}],
   model: "gpt-3.5-turbo",
@@ -83,14 +83,10 @@ const response = await openai.chat.completions.create({
 ```
 3. **Handling the response**
 The response from the API is stored in response variable as an object.To retrieve the actual response as text:
-```
+```javascript
 const reply = response.choices[0].message.content;
 console.log(reply);
 ```
-
-
-This overview provides a concise guide on how to integrate the OpenAI API into your Node.js application. Feel free to adjust it according to your project's specific requirements and preferences.
-
 
 # Collaborators 
 Jashanpreet Singh - 200513016  
