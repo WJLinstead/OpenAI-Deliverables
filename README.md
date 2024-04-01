@@ -13,85 +13,15 @@ DALL-E is an AI model developed by OpenAI capable of generating images from text
 
 In this project we will be focusing on the GPT Series.  
 
-# Requirements
+# Exercise Application
 
-You will need Node.js installed and have an account created with OpenAI.  
-This project requires an API key that is found in your OpenAI account.
-
-To create an account, go to https://openai.com/
-
-# Instructions
-
-## Installing OpenAI
-
-1. Open your desired code editor and create a new project
-
-2. Install the OpenAI Node.js library using your terminal
-```
-npm install openai
-```
-
-This will generate a package.json file with the openAI dependency inside, a package-lock.json file and a folder labelled node_modules with required files.
-
-## Generate your API Key
-
-2. Log in to your OpenAI account at https://openai.com/
-
-3. Select the "API" option
-
-4. On the left, there will be a navigation bar that pops open when you hover over it. Select the lock icon labelled "API Keys"
-
-5. Click the "+ Create new Secret Key" button to generate a new key
-
-6. Name your key and set your permissions. For this we will keep it selected as "All"
-
-7. Click the "Create secret key" button. 
-
-8. Copy and paste the generated key into a safe place as you may only access this key once. 
-
-## Using OPENAI API in Node.js
-
-1. **Initialize the OpenAI client:**
-In your Node.js application, require the `openai` library and initialize the client with your API key:
-
-```javascript
-const OpenAIApi = require("openai");
-const openai = new OpenAIApi({ apiKey: "YOUR_API_KEY" });
-```
-This can also be achieved using a .env file so security reasons!
-.env might look like: 
-```
-OPENAI_API_KEY="Actual_API_Key"
-```
-Then JavaScript can be written as:
-```javascript
-const OpenAIApi = require("openai"); 
-require("dotenv").config();
-
-// OPEN AI Package
-const openai = new OpenAIApi({
-  apiKey: process.env.OPENAI_SECRET_KEY,
-});
-```
-2. **Make requests to the OpenAI API:**
-To make a request to the OpenAI API, you can use the `openai.chat.completions.create` function as follows:
-```javascript
-const response = await openai.chat.completions.create({
-  messages: [{ role: "system", content: "This is a test prompt"}],
-  model: "gpt-3.5-turbo",
-});
-```
-3. **Handling the response**
-The response from the API is stored in response variable as an object.To retrieve the actual response as text:
-```javascript
-const reply = response.choices[0].message.content;
-console.log(reply);
-```
+To try out the exercise version of this application, go to https://github.com/syanismu/openai-exercise.   
+Follow the instructions to learn how this demo was created!
 
 # Collaborators 
-Jashanpreet Singh - 200513016  
-Shania Muller - 200270187  
-William Linstead  
+**Jashanpreet Singh** - 200513016  
+**Shania Muller** - 200270187  
+**William Linstead** - 200529417  
 
 ## Created for 
 COMP2068  
